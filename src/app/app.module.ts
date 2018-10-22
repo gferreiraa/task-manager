@@ -14,7 +14,7 @@ import { TaskItemComponent } from './task-item/task-item.component';
 import { MatLineModule } from '@angular/material/core';
 import { TaskListComponent } from './task-list/task-list.component';
 
-
+import { TaskService } from './task.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +30,9 @@ import { TaskListComponent } from './task-list/task-list.component';
     MatLineModule,
     MatSlideToggleModule
   ],
-  providers: [],
+  providers: [
+    TaskService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
