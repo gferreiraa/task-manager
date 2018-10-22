@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatMenuModule} from '@angular/material/menu';
 
 import { TaskItemComponent } from './task-item/task-item.component';
 import { MatLineModule } from '@angular/material/core';
@@ -44,7 +45,8 @@ import { FormsModule } from '@angular/forms';
     MatDialogModule,
     MatInputModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatMenuModule
   ],
   providers: [
     TaskService
