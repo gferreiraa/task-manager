@@ -2,7 +2,7 @@
   <app-task-item
     *ngFor="let task of tasks$ | async"
     [task]="task"
-    (perfomTask)="onPerfomTask($event)"
+    (performTask)="onPerformTask($event)"
     (selectTask)="selectedTask=$event"
   ></app-task-item>
 </mat-list>

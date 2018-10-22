@@ -16,8 +16,6 @@ export class TaskItemComponent implements OnInit {
     this[action].emit(this.task);
   }
 
-  constructor() { }
-
   ngOnInit() {
   }
 

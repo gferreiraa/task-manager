@@ -23,16 +23,16 @@ export class TaskService {
   create(task: Task): Promise<void> {
     const uid = this.db.createId();
     return this.tasks.doc<Task>(uid)
-    .set({
-      uid,
-      title: task.title,
-      done: false
-    });
+      .set({
+        uid,
+        title: task.title,
+        done: false
+      });
   }
 
   update(task: Task): Promise<void> {
     return this.tasks.doc<Task>(task.uid)
-   .update(task);
+      .update(task);
   }
 
   delete(task: Task): Promise<void> {

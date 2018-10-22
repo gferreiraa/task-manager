@@ -24,7 +24,9 @@ export class TaskListComponent implements OnInit {
     this.tasks$ = this.taskService.tasks.valueChanges();
   }
 
-  onPerfomTask(task: Task): void {
+  onPerformTask(task: Task): void {
+    task.done = !task.done;
+    this.taskService.update(task);
     console.log(task);
   }
 

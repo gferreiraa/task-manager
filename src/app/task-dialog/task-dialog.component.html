@@ -3,12 +3,22 @@
 <mat-dialog-content>
 
   <mat-form-field>
-    <input type="text" matInput>
+    <input
+    placeholder="Title"
+    type="text"
+    matInput
+    [(ngModel)]="task.title"
+    required
+    minlength="3"
+    #titleControl="ngModel"
+    (keyup.enter)="onSave()"
+    >
+    <mat-error>Please, fill in this field!</mat-error>
   </mat-form-field>
 
 </mat-dialog-content>
 
 <mat-dialog-actions>
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button (click)="onSave()">Save</button>
+  <button mat-button [disabled]="titleControl.invalid" (click)="onSave()">Save</button>
 </mat-dialog-actions>
